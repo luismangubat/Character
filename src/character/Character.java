@@ -17,7 +17,7 @@ public class Character {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ApplicationStarter.run("Dark Matter", new CharacterEnviroment());
+        ApplicationStarter.run("Pacman", new CharacterEnviroment());
         // TODO code application logic here
     }
     
