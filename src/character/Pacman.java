@@ -59,4 +59,7 @@ public class Pacman {
 //       this.MovingBall = width;
 //   }
 
+    void setX(int pokemonX) {
+    }
+
 }

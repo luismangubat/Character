@@ -4,9 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Users/Luis/NetBeansProjects/Character/src/character/CharacterEnviroment.java</file>
+            <file>file:/Users/Luis/NetBeansProjects/Character/src/character/MultipleBall.java</file>
+            <file>file:/Users/Luis/NetBeansProjects/Character/src/character/Ball3.java</file>
             <file>file:/Users/Luis/NetBeansProjects/Character/src/character/Pacman.java</file>
             <file>file:/Users/Luis/NetBeansProjects/Character/src/character/Ball.java</file>
-            <file>file:/Users/Luis/NetBeansProjects/Character/src/character/Ball2.java</file>
         </group>
     </open-files>
 </project-private>

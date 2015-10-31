@@ -12,23 +12,14 @@ import java.awt.Graphics;
  *
  * @author Luis
  */
-public class Ball {
-
-
- 
-
-  
-  
-
-    
-
-   public void draw(Graphics graphics) {
+public class Ball3 {
+    public void draw(Graphics graphics) {
         
           graphics.setColor(new Color(235, 240, 0));
           graphics.fillOval(getX(), getY(), getWidth(), getHeight());
     }
 
-    public Ball(int x, int y, int width, int height) {
+    public Ball3(int x, int y, int width, int height) {
         this.x = x;
         this.y = y;
         this.width = width;
@@ -94,3 +85,9 @@ public class Ball {
     }
 
 }
+
+    
+
+
+    
+
