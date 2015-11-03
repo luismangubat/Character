@@ -29,7 +29,7 @@ class MultipleBall {
         
     }
     public void draw(Graphics graphics) {
-        graphics.setColor(Color.white);
+        graphics.setColor(Color.red);
         graphics.fillRect(x, y, size * 5, size );
                 
                 

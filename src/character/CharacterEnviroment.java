@@ -5,12 +5,17 @@
  */
 package character;
 
+import audio.Playlist;
+import audio.SoundManager;
+import audio.Source;
+import audio.Track;
 import environment.Environment;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
+import sun.audio.*;
 
 /**
  *
@@ -31,6 +36,10 @@ class CharacterEnviroment extends Environment {
     private int ballX3;
     private int pokemonX;
     private int xChange;
+    private Ball4 ball4;
+    private int ballX4;
+    
+   
 
     public CharacterEnviroment() {
 
@@ -39,6 +48,7 @@ class CharacterEnviroment extends Environment {
         ball2 = new Ball2(600, 250, 100, 100);
         this.setBackground(Color.black);
         ball3 = new Ball3(600, 250, 100, 100);
+        ball4 = new Ball4 (600, 250, 100, 100);
 
         balls = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
@@ -46,6 +56,20 @@ class CharacterEnviroment extends Environment {
 
         }
 
+        ArrayList<Track> tracks = new ArrayList<>();
+        tracks.add(new Track("CHOMP", Source.RESOURCE, "/character/pacman_chomp.wav"));
+        
+        sm = new SoundManager(new Playlist(tracks));
+    }
+    
+    SoundManager sm;
+
+    @Override
+    public void keyPressedHandler(KeyEvent e) {
+        if ((sm != null) && (e.getKeyCode() == KeyEvent.VK_SPACE)) {
+            System.out.println("Sound!!!");
+            sm.play("CHOMP");
+        }
     }
 
     public int random(int value) {
@@ -107,6 +131,17 @@ class CharacterEnviroment extends Environment {
             }
             ball3.setX(ballX3);
         }
+        if (ball4 != null) {
+            if (ballX4 == 0) {
+                ballX4 = 1100;
+            }
+            if (ballX4 >= 160) {
+                ballX4 = ballX4 - 7;
+            } else {
+                ballX4 = 900;
+            }
+            ball4.setX(ballX4);
+        }
 
         if (pokemon != null) {
             if (pokemonX >= 160) {
@@ -128,10 +163,6 @@ class CharacterEnviroment extends Environment {
         });
             
         }
-    }
-
-    @Override
-    public void keyPressedHandler(KeyEvent e) {
     }
 
     @Override
@@ -159,6 +190,9 @@ class CharacterEnviroment extends Environment {
         }
         if (ball3 != null) {
             ball3.draw(graphics);
+        }
+        if (ball4 != null) {
+            ball4.draw(graphics);
         }
 
     }
