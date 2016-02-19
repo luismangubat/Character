@@ -1,4 +1,4 @@
- /*
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -12,14 +12,14 @@ import java.awt.Graphics;
  *
  * @author Luis
  */
-public class Ball2 {
-    public void draw(Graphics graphics) {
+public class Ball5 {
+      public void draw(Graphics graphics) {
         
           graphics.setColor(new Color(235, 240, 0));
           graphics.fillOval(getX(), getY(), getWidth(), getHeight());
     }
 
-    public Ball2(int x, int y, int width, int height) {
+    public Ball5(int x, int y, int width, int height) {
         this.x = x;
         this.y = y;
         this.width = width;
@@ -85,6 +85,8 @@ public class Ball2 {
     }
 
 }
-
+//    public draw (Graphics graphics) {
+//        
+//    }
     
 

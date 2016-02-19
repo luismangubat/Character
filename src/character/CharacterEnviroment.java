@@ -38,6 +38,7 @@ class CharacterEnviroment extends Environment {
     private int xChange;
     private Ball4 ball4;
     private int ballX4;
+//    private ball
     
    
 
@@ -142,7 +143,9 @@ class CharacterEnviroment extends Environment {
             }
             ball4.setX(ballX4);
         }
-
+//        if (ball4 != null) {
+//            if (ballX5 == 0)
+//        }
         if (pokemon != null) {
             if (pokemonX >= 160) {
                 pokemonX = pokemonX + 3;

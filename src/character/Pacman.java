@@ -36,8 +36,8 @@ public class Pacman {
 //        graphics.setColor(new Color(235, 240, 0));
 //        graphics.fillOval(800, 250, 100, 100);
         
-        graphics.setColor(Color.red);
-        graphics.fillOval(x + 200, y + 50, MovingBall + 50, MovingBall + 50);
+//        graphics.setColor(Color.red);
+//        graphics.fillOval(x + 200, y + 50, MovingBall + 50, MovingBall + 50);
 //        graphics.setColor(Color.yellow);
 //        graphics.fillOval(100, 250, 100, 100);
 ///        
